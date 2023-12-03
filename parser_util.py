@@ -17,5 +17,8 @@ def readAsMatrix(fileName, type, sep):
 
     matrix = list()
     for i in input:
-        matrix.append(i.split(sep))
+        if sep != "":
+            matrix.append(i.split(sep))
+        else:
+            matrix.append(i)
     return matrix
